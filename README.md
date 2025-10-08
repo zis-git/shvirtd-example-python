@@ -102,3 +102,4 @@ https://github.com/zis-git/shvirtd-example-python
 ## Задача 7 (***)
 Запустите ваше python-приложение с помощью runC, не используя docker или containerd.  
 Предоставьте скриншоты  действий .
+<img width="1003" height="707" alt="2025-10-08_15-37-57" src="https://github.com/user-attachments/assets/668280d7-8b10-46e5-82af-664f18cedf5f" />
