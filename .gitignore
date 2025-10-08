@@ -12,3 +12,7 @@ venv/
 .vscode/
 .idea/
 .DS_Store
+
+# Local-only overrides
+compose.override.yaml
+*.bak
