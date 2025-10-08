@@ -1,0 +1,54 @@
+include:
+  - proxy.yaml
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p${MYSQL_ROOT_PASSWORD} || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks:
+      backend:
+        ipv4_address: 172.20.0.10
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: web
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      DB_HOST: db
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      DB_NAME: ${MYSQL_DATABASE}
+      # имя/порт БД — приложение будет стучаться в контейнер db
+      MYSQL_HOST: db
+      MYSQL_PORT: "3306"
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      backend:
+        ipv4_address: 172.20.0.5
+    expose:
+      - "5000"
+
+volumes:
+  dbdata:
