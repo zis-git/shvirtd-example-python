@@ -1,0 +1,4 @@
+FROM hashicorp/terraform:latest as src
+FROM alpine:3.20
+COPY --from=src /bin/terraform /terraform
+ENTRYPOINT ["/bin/sh"]
