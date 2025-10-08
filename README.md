@@ -74,17 +74,30 @@ https://github.com/zis-git/shvirtd-example-python
 3. Настройте выполнение скрипта раз в 1 минуту через cron, crontab или systemctl timer. Придумайте способ не светить логин/пароль в git!!
 4. Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
 
+
+## Решение 5
+<img width="885" height="409" alt="2025-10-08_15-14-52" src="https://github.com/user-attachments/assets/e058a4d3-1325-490f-941a-36500f84cfe7" />
+<img width="689" height="630" alt="2025-10-08_15-17-53" src="https://github.com/user-attachments/assets/ac5ce951-4758-41a3-a1ef-a81d6c464554" />
+
+
 ## Задача 6
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
 Предоставьте скриншоты  действий .
 
+<img width="809" height="423" alt="2025-10-08_15-30-43" src="https://github.com/user-attachments/assets/0918f1bf-bf96-4f78-bf31-d9c767edbed4" />
+
+
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
 Предоставьте скриншоты  действий .
+<img width="994" height="658" alt="2025-10-08_15-24-43" src="https://github.com/user-attachments/assets/04e59f5a-f589-4e2a-bb40-00c294211d60" />
+
 
 ## Задача 6.2 (**)
 Предложите способ извлечь файл из контейнера, используя только команду docker build и любой Dockerfile.  
 Предоставьте скриншоты  действий .
+<img width="778" height="275" alt="2025-10-08_15-33-09" src="https://github.com/user-attachments/assets/5275d94c-708f-4de9-b5d4-2fec29a6d6af" />
+<img width="1048" height="768" alt="2025-10-08_15-28-07" src="https://github.com/user-attachments/assets/b58cdc8d-6975-44ca-864e-a3b4b917741a" />
 
 ## Задача 7 (***)
 Запустите ваше python-приложение с помощью runC, не используя docker или containerd.  
