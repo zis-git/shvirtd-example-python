@@ -105,4 +105,10 @@ https://github.com/zis-git/shvirtd-example-python
 <img width="1822" height="488" alt="2025-10-08_15-44-20" src="https://github.com/user-attachments/assets/c2f22599-cd58-499f-8368-7faa20a2c3ab" />
 <img width="1039" height="1059" alt="2025-10-08_15-56-18" src="https://github.com/user-attachments/assets/b7bfa683-575f-4152-b7bb-3710e689ef19" />
 
+## Доработка 
+<img width="2181" height="1126" alt="2025-10-09_08-07-01" src="https://github.com/user-attachments/assets/95362302-78d3-42ff-9d36-46c7b35d820a" />
+<img width="837" height="148" alt="2025-10-09_08-15-42" src="https://github.com/user-attachments/assets/c309b552-a7bb-4137-918f-9c0f9b301cac" />
+
+
+
 
